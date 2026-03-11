@@ -68,6 +68,56 @@
 
 
   <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    .wa-float {
+      position: fixed;
+      right: 20px;
+      bottom: 24px;
+      z-index: 10000;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      background: #ffffff;
+      color: #25D366;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 50%;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: wa-float-pulse 2.4s ease-in-out infinite;
+    }
+    .wa-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+    }
+    .wa-float__icon {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+    }
+    @keyframes wa-float-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.35), 0 10px 24px rgba(0, 0, 0, 0.2);
+      }
+      70% {
+        box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 10px 24px rgba(0, 0, 0, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 10px 24px rgba(0, 0, 0, 0.2);
+      }
+    }
+    @media (max-width: 640px) {
+      .wa-float {
+        right: 14px;
+        bottom: 16px;
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
 </head>
 
 <body class="l-home l-navbar-affixed" data-bs-no-jquery="true">
@@ -12168,6 +12218,26 @@
       <div class="modal-content"></div>
     </div>
   </div>
+  <a class="wa-float" id="wa-float" href="https://wa.me/918433870501" target="_blank" rel="noopener"
+    aria-label="Chat on WhatsApp"
+    data-whatsapp-message="Hello! 🍽️👋  
+
+I recently came across your website 🌐 and I’m interested in trying some of the dishes from Musarrat Restaurant. Your menu looks very appealing 🤤 and I would love to place an order.  
+
+Could you please share your full menu 📋 and let me know what dishes are available today? 🍛🥘 I would also appreciate any recommendations ⭐ or popular dishes you suggest.  
+
+Thank you! 🙏 I look forward to your response.">
+    <img class="wa-float__icon"
+      src="https://upload.wikimedia.org/wikipedia/commons/4/4c/WhatsApp_Logo_green.svg" alt="WhatsApp" />
+  </a>
+  <script>
+    (function () {
+      var el = document.getElementById("wa-float");
+      if (!el) return;
+      var msg = el.getAttribute("data-whatsapp-message") || "";
+      el.href = "https://wa.me/918433870501?text=" + encodeURIComponent(msg);
+    })();
+  </script>
 </body>
 
 </html>
