@@ -118,6 +118,326 @@
       }
     }
   </style>
+  <style>
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    img,
+    svg,
+    video,
+    canvas {
+      max-width: 100%;
+      height: auto;
+    }
+
+    [id^="section-"],
+    [id^="menu-"],
+    [id^="link-to-"] {
+      scroll-margin-top: 110px;
+    }
+
+    .m-group-nav__list--tabs,
+    .m-group-nav__list--horizontal {
+      scrollbar-width: thin;
+    }
+
+    @media (max-width: 1199px) {
+      .container,
+      .container-fluid {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .m-nav__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 18px;
+      }
+
+      .m-nav__list-item {
+        float: none;
+      }
+
+      .m-nav__item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        text-align: center;
+      }
+
+      .m-hero__header,
+      .m-hero__header .m-hero__title,
+      .m-hero__header .m-hero__sup-title {
+        max-width: 100%;
+        text-wrap: balance;
+      }
+
+      .m-hero__title,
+      .m-hero__title--simple {
+        font-size: clamp(3.2rem, 5vw, 5.6rem);
+        line-height: 1.1;
+      }
+
+      .m-hero__sup-title {
+        font-size: clamp(1.6rem, 2vw, 2.2rem);
+      }
+
+      .m-info-box__action .btn,
+      .m-info-boxes__action .btn,
+      .m-hero__action .btn {
+        white-space: normal;
+      }
+
+      #menu-nav,
+      .m-group-nav--horizontal,
+      .m-group-nav--tabs {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .m-group-nav__list--tabs,
+      .m-group-nav__list--horizontal {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        min-width: max-content;
+        padding-bottom: 8px;
+      }
+
+      .m-group-nav__list-item {
+        flex: 0 0 auto;
+      }
+
+      .m-group-nav__link,
+      .m-group__header-link {
+        white-space: nowrap;
+      }
+
+      .m-scrollable-nav-arrow {
+        display: none !important;
+      }
+
+      .m-flex-layout__aside--sticky-tabs {
+        position: sticky;
+        top: 72px !important;
+        z-index: 20;
+      }
+
+      .m-item__description {
+        max-width: 100%;
+      }
+
+      .menuv2-cart-button,
+      .m-item__col--secondary.actions {
+        min-width: 0;
+      }
+
+      .add-button,
+      .btn-ordering,
+      .continue-shopping {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .container,
+      .container-fluid {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .m-hero__title,
+      .m-hero__title--simple {
+        font-size: clamp(2.8rem, 10vw, 4.2rem);
+      }
+
+      .m-hero__content,
+      .m-hero__col-inner {
+        text-align: center;
+      }
+
+      .m-hero__action .btn,
+      .m-info-box__action .btn,
+      .m-info-boxes__action .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .m-flex-layout__aside--sticky-tabs {
+        top: 60px !important;
+      }
+
+      .m-group-nav__link,
+      .m-group__header-link {
+        font-size: 1.4rem;
+      }
+
+      .m-item {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .m-item__col,
+      .m-item__col--secondary,
+      .menuv2-cart-button {
+        width: 100%;
+      }
+
+      .m-item__col--secondary.actions,
+      .menuv2-cart-button {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .menuv2-cart-button .add-button,
+      .m-item__col--secondary .add-button {
+        width: 100%;
+        max-width: 220px;
+      }
+
+      .m-list__title,
+      .restaurant-menu__dish-group-name {
+        font-size: 2.8rem;
+        line-height: 1.15;
+      }
+
+      .restaurant-menu__dish-name,
+      .m-item__title {
+        font-size: 1.9rem;
+        line-height: 1.25;
+      }
+
+      .m-item__description,
+      .m-item__description .muted {
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
+
+      #sticky-cart-button .btn,
+      .m-dock__content .btn {
+        width: 100%;
+      }
+
+      .modal-dialog {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+      }
+
+      .mobile-navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(320px, 88vw);
+        height: 100vh;
+        max-width: 100%;
+        background: #18202d;
+        color: #fff;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: transform 0.25s ease;
+        z-index: 10030;
+      }
+
+      .mobile-navigation[aria-expanded="true"],
+      .mobile-navigation.is-open {
+        transform: translateX(0);
+      }
+
+      .mobile-navigation__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .mobile-navigation__list {
+        list-style: none;
+        margin: 0;
+        padding: 12px 0 20px;
+      }
+
+      .mobile-navigation__list li {
+        display: block;
+      }
+
+      .mobile-navigation__list a {
+        display: block;
+        padding: 14px 18px;
+        color: #fff;
+        font-size: 1.7rem;
+        line-height: 1.3;
+        text-decoration: none;
+      }
+
+      .mobile-navigation__list a.is-active {
+        color: #de8b1a;
+      }
+
+      .mobile-navigation-toggle {
+        color: #fff;
+      }
+
+      .mobile-navigation-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(6, 10, 16, 0.55);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+        z-index: 10020;
+      }
+
+      .mobile-navigation-backdrop.is-open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      body.mobile-nav-open {
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .m-nav__list {
+        gap: 6px 12px;
+      }
+
+      .m-nav__item {
+        font-size: 1.5rem;
+      }
+
+      .m-group-nav__list--tabs,
+      .m-group-nav__list--horizontal {
+        gap: 6px;
+      }
+
+      .m-group-nav__link,
+      .m-group__header-link {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .menuv2-cart-button .add-button,
+      .m-item__col--secondary .add-button {
+        max-width: 100%;
+      }
+
+      .wa-float {
+        right: 12px;
+        bottom: 12px;
+      }
+    }
+  </style>
 </head>
 
 <body class="l-home l-navbar-affixed" data-bs-no-jquery="true">
@@ -965,7 +1285,7 @@
                           </p>
 
                           <p class="m-hero__action animated--delay-5 fadeInDown">
-                            <a href="https://www.musarratrestaurant.pl/#section-menu"
+                            <a href="#section-menu"
                               class="btn btn-primary-on-dark btn-gfb-lg" data-ga-action="Hero button clicked">
                               <font dir="auto" style="vertical-align: inherit;">
                                 <font dir="auto" style="vertical-align: inherit;">
@@ -1153,7 +1473,7 @@
 
 
                 <li class="hidden-xs hidden-sm">
-                  <a href="https://www.musarratrestaurant.pl/#section-menu" class="btn btn-default">
+                  <a href="#section-menu" class="btn btn-default">
                     <font dir="auto" style="vertical-align: inherit;">
                       <font dir="auto" style="vertical-align: inherit;">
                         Order online
@@ -1222,7 +1542,7 @@
 
 
       <li class="">
-        <a class="is-active" title="About us" href="https://www.musarratrestaurant.pl/#section-about-us">
+        <a class="is-active" title="About us" href="#section-about-us">
           <font dir="auto" style="vertical-align: inherit;">
             <font dir="auto" style="vertical-align: inherit;">
               About us
@@ -1235,7 +1555,7 @@
 
 
       <li class="">
-        <a class="" title="Promotions" href="https://www.musarratrestaurant.pl/#section-promotions">
+        <a class="" title="Promotions" href="#section-promotions">
           <font dir="auto" style="vertical-align: inherit;">
             <font dir="auto" style="vertical-align: inherit;">
               Promotions
@@ -1248,7 +1568,7 @@
 
 
       <li class="">
-        <a class="" title="Menu" href="https://www.musarratrestaurant.pl/#section-menu">
+        <a class="" title="Menu" href="#section-menu">
           <font dir="auto" style="vertical-align: inherit;">
             <font dir="auto" style="vertical-align: inherit;">
               Menu
@@ -1261,7 +1581,7 @@
 
 
       <li class="">
-        <a class="" title="Opinions" href="https://www.musarratrestaurant.pl/#section-reviews">
+        <a class="" title="Opinions" href="#section-reviews">
           <font dir="auto" style="vertical-align: inherit;">
             <font dir="auto" style="vertical-align: inherit;">
               Opinions
@@ -1274,7 +1594,7 @@
 
 
       <li class="">
-        <a class="" title="Gallery" href="https://www.musarratrestaurant.pl/#section-gallery">
+        <a class="" title="Gallery" href="#section-gallery">
           <font dir="auto" style="vertical-align: inherit;">
             <font dir="auto" style="vertical-align: inherit;">
               Gallery
@@ -1287,7 +1607,7 @@
 
 
       <li class="">
-        <a class="" title="Contact" href="https://www.musarratrestaurant.pl/#section-contact">
+        <a class="" title="Contact" href="#section-contact">
           <font dir="auto" style="vertical-align: inherit;">
             <font dir="auto" style="vertical-align: inherit;">
               Contact
@@ -1676,7 +1996,7 @@
               </h2>
 
               <p class="m-info-boxes__action ">
-                <a href="https://www.musarratrestaurant.pl/#section-menu" class="btn btn-primary">
+                <a href="#section-menu" class="btn btn-primary">
                   <font dir="auto" style="vertical-align: inherit;">
                     <font dir="auto" style="vertical-align: inherit;">View menu</font>
                   </font>
@@ -1746,7 +2066,7 @@
               </div>
 
               <p class="m-info-box__action">
-                <a href="https://www.musarratrestaurant.pl/#section-menu" class="btn btn-primary btn-lg">
+                <a href="#section-menu" class="btn btn-primary btn-lg">
                   <font dir="auto" style="vertical-align: inherit;">
                     <font dir="auto" style="vertical-align: inherit;">Read more</font>
                   </font>
@@ -1925,7 +2245,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="103bea7e-77ae-42e1-a0b6-c6f0d89a3f92" data-visible-in="Site">
-                      <a id="link-to-przystawki" href="https://www.musarratrestaurant.pl/#menu-przystawki"
+                      <a id="link-to-przystawki" href="#menu-przystawki"
                         class="m-group-nav__link js-toggle-group-link is-active"
                         data-field-id="Menu.groupNav.103bea7e-77ae-42e1-a0b6-c6f0d89a3f92"
                         data-target="#menu-przystawki" data-initialized="true">
@@ -1945,7 +2265,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="58fe36cc-3033-49eb-9c3b-52bdc9083214" data-visible-in="Site">
-                      <a id="link-to-salatki" href="https://www.musarratrestaurant.pl/#menu-salatki"
+                      <a id="link-to-salatki" href="#menu-salatki"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.58fe36cc-3033-49eb-9c3b-52bdc9083214" data-target="#menu-salatki">
 
@@ -1964,7 +2284,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="07f67e9b-6036-41ca-9e99-7c90eaec337f" data-visible-in="Site">
-                      <a id="link-to-zupy" href="https://www.musarratrestaurant.pl/#menu-zupy"
+                      <a id="link-to-zupy" href="#menu-zupy"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.07f67e9b-6036-41ca-9e99-7c90eaec337f" data-target="#menu-zupy">
 
@@ -1984,7 +2304,7 @@
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="07234dac-241d-47aa-9c29-2afcea378cb8" data-visible-in="Site">
                       <a id="link-to-przystawki-z-pieca-tandoor"
-                        href="https://www.musarratrestaurant.pl/#menu-przystawki-z-pieca-tandoor"
+                        href="#menu-przystawki-z-pieca-tandoor"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.07234dac-241d-47aa-9c29-2afcea378cb8"
                         data-target="#menu-przystawki-z-pieca-tandoor">
@@ -2004,7 +2324,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="a46f2933-ba22-42bd-a769-3e2c038a9eec" data-visible-in="Site">
-                      <a id="link-to-menu-dla-dzieci" href="https://www.musarratrestaurant.pl/#menu-menu-dla-dzieci"
+                      <a id="link-to-menu-dla-dzieci" href="#menu-menu-dla-dzieci"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.a46f2933-ba22-42bd-a769-3e2c038a9eec"
                         data-target="#menu-menu-dla-dzieci">
@@ -2024,7 +2344,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="ed2df4c5-9eca-40bc-b939-f98ed397e951" data-visible-in="Site">
-                      <a id="link-to-indyjski-jogurt" href="https://www.musarratrestaurant.pl/#menu-indyjski-jogurt"
+                      <a id="link-to-indyjski-jogurt" href="#menu-indyjski-jogurt"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.ed2df4c5-9eca-40bc-b939-f98ed397e951"
                         data-target="#menu-indyjski-jogurt">
@@ -2045,7 +2365,7 @@
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="26f51858-add2-44fc-af9e-bbc100841214" data-visible-in="Site">
                       <a id="link-to-wegetarianskie-dania-glowne"
-                        href="https://www.musarratrestaurant.pl/#menu-wegetarianskie-dania-glowne"
+                        href="#menu-wegetarianskie-dania-glowne"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.26f51858-add2-44fc-af9e-bbc100841214"
                         data-target="#menu-wegetarianskie-dania-glowne">
@@ -2066,7 +2386,7 @@
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="8c41b580-dd5a-4cc8-9f97-3adb82c3dacf" data-visible-in="Site">
                       <a id="link-to-indyjski-ser-dania-glowne"
-                        href="https://www.musarratrestaurant.pl/#menu-indyjski-ser-dania-glowne"
+                        href="#menu-indyjski-ser-dania-glowne"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.8c41b580-dd5a-4cc8-9f97-3adb82c3dacf"
                         data-target="#menu-indyjski-ser-dania-glowne">
@@ -2087,7 +2407,7 @@
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="105715b1-0ad5-4aac-a44c-1391b7d6ac89" data-visible-in="Site">
                       <a id="link-to-dania-glowne-z-kurczaka"
-                        href="https://www.musarratrestaurant.pl/#menu-dania-glowne-z-kurczaka"
+                        href="#menu-dania-glowne-z-kurczaka"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.105715b1-0ad5-4aac-a44c-1391b7d6ac89"
                         data-target="#menu-dania-glowne-z-kurczaka">
@@ -2108,7 +2428,7 @@
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="2ee3ac8e-307a-44b6-b0e3-43a24a7603b4" data-visible-in="Site">
                       <a id="link-to-dania-glowne-z-jagniecina"
-                        href="https://www.musarratrestaurant.pl/#menu-dania-glowne-z-jagniecina"
+                        href="#menu-dania-glowne-z-jagniecina"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.2ee3ac8e-307a-44b6-b0e3-43a24a7603b4"
                         data-target="#menu-dania-glowne-z-jagniecina">
@@ -2129,7 +2449,7 @@
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="1e41d7e0-49d0-4d3c-a39c-8278c8ec2cf9" data-visible-in="Site">
                       <a id="link-to-glowne-dania-z-krewetek"
-                        href="https://www.musarratrestaurant.pl/#menu-glowne-dania-z-krewetek"
+                        href="#menu-glowne-dania-z-krewetek"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.1e41d7e0-49d0-4d3c-a39c-8278c8ec2cf9"
                         data-target="#menu-glowne-dania-z-krewetek">
@@ -2149,7 +2469,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="1965c65c-3f12-4abf-9388-ad7f2bb60548" data-visible-in="Site">
-                      <a id="link-to-makarony" href="https://www.musarratrestaurant.pl/#menu-makarony"
+                      <a id="link-to-makarony" href="#menu-makarony"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.1965c65c-3f12-4abf-9388-ad7f2bb60548" data-target="#menu-makarony">
 
@@ -2168,7 +2488,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="034c86d3-206c-40cc-87f0-b69e788798a9" data-visible-in="Site">
-                      <a id="link-to-ryz-basmati" href="https://www.musarratrestaurant.pl/#menu-ryz-basmati"
+                      <a id="link-to-ryz-basmati" href="#menu-ryz-basmati"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.034c86d3-206c-40cc-87f0-b69e788798a9"
                         data-target="#menu-ryz-basmati">
@@ -2189,7 +2509,7 @@
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="02c354a3-a5c8-4d25-8d06-9f9995b97e11" data-visible-in="Site">
                       <a id="link-to-pakistanskie-placki"
-                        href="https://www.musarratrestaurant.pl/#menu-pakistanskie-placki"
+                        href="#menu-pakistanskie-placki"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.02c354a3-a5c8-4d25-8d06-9f9995b97e11"
                         data-target="#menu-pakistanskie-placki">
@@ -2209,7 +2529,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="9bc93c3c-6539-4ee8-85b8-f0eaacbf046f" data-visible-in="Site">
-                      <a id="link-to-desery-indyjskie" href="https://www.musarratrestaurant.pl/#menu-desery-indyjskie"
+                      <a id="link-to-desery-indyjskie" href="#menu-desery-indyjskie"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.9bc93c3c-6539-4ee8-85b8-f0eaacbf046f"
                         data-target="#menu-desery-indyjskie">
@@ -2229,7 +2549,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="472c18b0-6262-4dac-b389-b9dfbca087fa" data-visible-in="Site">
-                      <a id="link-to-napoje" href="https://www.musarratrestaurant.pl/#menu-napoje"
+                      <a id="link-to-napoje" href="#menu-napoje"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.472c18b0-6262-4dac-b389-b9dfbca087fa" data-target="#menu-napoje">
 
@@ -2281,7 +2601,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="103bea7e-77ae-42e1-a0b6-c6f0d89a3f92" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-przystawki"
+                      <a href="#menu-przystawki"
                         class="m-group-nav__link js-toggle-group-link is-active"
                         data-field-id="Menu.groupNav.103bea7e-77ae-42e1-a0b6-c6f0d89a3f92"
                         data-target="#menu-przystawki">
@@ -2299,7 +2619,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="58fe36cc-3033-49eb-9c3b-52bdc9083214" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-salatki"
+                      <a href="#menu-salatki"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.58fe36cc-3033-49eb-9c3b-52bdc9083214" data-target="#menu-salatki">
 
@@ -2316,7 +2636,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="07f67e9b-6036-41ca-9e99-7c90eaec337f" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-zupy"
+                      <a href="#menu-zupy"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.07f67e9b-6036-41ca-9e99-7c90eaec337f" data-target="#menu-zupy">
 
@@ -2333,7 +2653,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="07234dac-241d-47aa-9c29-2afcea378cb8" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-przystawki-z-pieca-tandoor"
+                      <a href="#menu-przystawki-z-pieca-tandoor"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.07234dac-241d-47aa-9c29-2afcea378cb8"
                         data-target="#menu-przystawki-z-pieca-tandoor">
@@ -2351,7 +2671,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="a46f2933-ba22-42bd-a769-3e2c038a9eec" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-menu-dla-dzieci"
+                      <a href="#menu-menu-dla-dzieci"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.a46f2933-ba22-42bd-a769-3e2c038a9eec"
                         data-target="#menu-menu-dla-dzieci">
@@ -2369,7 +2689,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="ed2df4c5-9eca-40bc-b939-f98ed397e951" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-indyjski-jogurt"
+                      <a href="#menu-indyjski-jogurt"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.ed2df4c5-9eca-40bc-b939-f98ed397e951"
                         data-target="#menu-indyjski-jogurt">
@@ -2387,7 +2707,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="26f51858-add2-44fc-af9e-bbc100841214" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-wegetarianskie-dania-glowne"
+                      <a href="#menu-wegetarianskie-dania-glowne"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.26f51858-add2-44fc-af9e-bbc100841214"
                         data-target="#menu-wegetarianskie-dania-glowne">
@@ -2405,7 +2725,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="8c41b580-dd5a-4cc8-9f97-3adb82c3dacf" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-indyjski-ser-dania-glowne"
+                      <a href="#menu-indyjski-ser-dania-glowne"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.8c41b580-dd5a-4cc8-9f97-3adb82c3dacf"
                         data-target="#menu-indyjski-ser-dania-glowne">
@@ -2423,7 +2743,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="105715b1-0ad5-4aac-a44c-1391b7d6ac89" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-dania-glowne-z-kurczaka"
+                      <a href="#menu-dania-glowne-z-kurczaka"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.105715b1-0ad5-4aac-a44c-1391b7d6ac89"
                         data-target="#menu-dania-glowne-z-kurczaka">
@@ -2441,7 +2761,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="2ee3ac8e-307a-44b6-b0e3-43a24a7603b4" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-dania-glowne-z-jagniecina"
+                      <a href="#menu-dania-glowne-z-jagniecina"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.2ee3ac8e-307a-44b6-b0e3-43a24a7603b4"
                         data-target="#menu-dania-glowne-z-jagniecina">
@@ -2459,7 +2779,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="1e41d7e0-49d0-4d3c-a39c-8278c8ec2cf9" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-glowne-dania-z-krewetek"
+                      <a href="#menu-glowne-dania-z-krewetek"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.1e41d7e0-49d0-4d3c-a39c-8278c8ec2cf9"
                         data-target="#menu-glowne-dania-z-krewetek">
@@ -2477,7 +2797,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="1965c65c-3f12-4abf-9388-ad7f2bb60548" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-makarony"
+                      <a href="#menu-makarony"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.1965c65c-3f12-4abf-9388-ad7f2bb60548" data-target="#menu-makarony">
 
@@ -2494,7 +2814,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="034c86d3-206c-40cc-87f0-b69e788798a9" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-ryz-basmati"
+                      <a href="#menu-ryz-basmati"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.034c86d3-206c-40cc-87f0-b69e788798a9"
                         data-target="#menu-ryz-basmati">
@@ -2512,7 +2832,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="02c354a3-a5c8-4d25-8d06-9f9995b97e11" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-pakistanskie-placki"
+                      <a href="#menu-pakistanskie-placki"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.02c354a3-a5c8-4d25-8d06-9f9995b97e11"
                         data-target="#menu-pakistanskie-placki">
@@ -2530,7 +2850,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="9bc93c3c-6539-4ee8-85b8-f0eaacbf046f" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-desery-indyjskie"
+                      <a href="#menu-desery-indyjskie"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.9bc93c3c-6539-4ee8-85b8-f0eaacbf046f"
                         data-target="#menu-desery-indyjskie">
@@ -2548,7 +2868,7 @@
 
                     <li class="m-group-nav__list-item js-toggle-group-list-item"
                       data-section-id="472c18b0-6262-4dac-b389-b9dfbca087fa" data-visible-in="Site">
-                      <a href="https://www.musarratrestaurant.pl/#menu-napoje"
+                      <a href="#menu-napoje"
                         class="m-group-nav__link js-toggle-group-link"
                         data-field-id="Menu.groupNav.472c18b0-6262-4dac-b389-b9dfbca087fa" data-target="#menu-napoje">
 
@@ -2596,7 +2916,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="103bea7e-77ae-42e1-a0b6-c6f0d89a3f92" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-przystawki"
+                        <a href="#menu-przystawki"
                           class="m-group__header-link js-toggle-group-link is-active" data-target="#menu-przystawki">
 
                           <div class="m-group__header-text">
@@ -3111,7 +3431,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-przystawki"
+                        <a href="#link-to-przystawki"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -3125,7 +3445,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="58fe36cc-3033-49eb-9c3b-52bdc9083214" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-salatki"
+                        <a href="#menu-salatki"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-salatki">
 
                           <div class="m-group__header-text">
@@ -3255,7 +3575,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-salatki"
+                        <a href="#link-to-salatki"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -3269,7 +3589,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="07f67e9b-6036-41ca-9e99-7c90eaec337f" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-zupy"
+                        <a href="#menu-zupy"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-zupy">
 
                           <div class="m-group__header-text">
@@ -3554,7 +3874,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-zupy"
+                        <a href="#link-to-zupy"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -3568,7 +3888,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="07234dac-241d-47aa-9c29-2afcea378cb8" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-przystawki-z-pieca-tandoor"
+                        <a href="#menu-przystawki-z-pieca-tandoor"
                           class="m-group__header-link js-toggle-group-link"
                           data-target="#menu-przystawki-z-pieca-tandoor">
 
@@ -4316,7 +4636,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-przystawki-z-pieca-tandoor"
+                        <a href="#link-to-przystawki-z-pieca-tandoor"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -4330,7 +4650,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="a46f2933-ba22-42bd-a769-3e2c038a9eec" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-menu-dla-dzieci"
+                        <a href="#menu-menu-dla-dzieci"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-menu-dla-dzieci">
 
                           <div class="m-group__header-text">
@@ -4607,7 +4927,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-menu-dla-dzieci"
+                        <a href="#link-to-menu-dla-dzieci"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -4621,7 +4941,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="ed2df4c5-9eca-40bc-b939-f98ed397e951" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-indyjski-jogurt"
+                        <a href="#menu-indyjski-jogurt"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-indyjski-jogurt">
 
                           <div class="m-group__header-text">
@@ -4828,7 +5148,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-indyjski-jogurt"
+                        <a href="#link-to-indyjski-jogurt"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -4842,7 +5162,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="26f51858-add2-44fc-af9e-bbc100841214" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-wegetarianskie-dania-glowne"
+                        <a href="#menu-wegetarianskie-dania-glowne"
                           class="m-group__header-link js-toggle-group-link"
                           data-target="#menu-wegetarianskie-dania-glowne">
 
@@ -5127,7 +5447,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-wegetarianskie-dania-glowne"
+                        <a href="#link-to-wegetarianskie-dania-glowne"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -5141,7 +5461,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="8c41b580-dd5a-4cc8-9f97-3adb82c3dacf" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-indyjski-ser-dania-glowne"
+                        <a href="#menu-indyjski-ser-dania-glowne"
                           class="m-group__header-link js-toggle-group-link"
                           data-target="#menu-indyjski-ser-dania-glowne">
 
@@ -5734,7 +6054,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-indyjski-ser-dania-glowne"
+                        <a href="#link-to-indyjski-ser-dania-glowne"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -5748,7 +6068,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="105715b1-0ad5-4aac-a44c-1391b7d6ac89" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-dania-glowne-z-kurczaka"
+                        <a href="#menu-dania-glowne-z-kurczaka"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-dania-glowne-z-kurczaka">
 
                           <div class="m-group__header-text">
@@ -6802,7 +7122,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-dania-glowne-z-kurczaka"
+                        <a href="#link-to-dania-glowne-z-kurczaka"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -6816,7 +7136,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="2ee3ac8e-307a-44b6-b0e3-43a24a7603b4" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-dania-glowne-z-jagniecina"
+                        <a href="#menu-dania-glowne-z-jagniecina"
                           class="m-group__header-link js-toggle-group-link"
                           data-target="#menu-dania-glowne-z-jagniecina">
 
@@ -7639,7 +7959,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-dania-glowne-z-jagniecina"
+                        <a href="#link-to-dania-glowne-z-jagniecina"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -7653,7 +7973,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="1e41d7e0-49d0-4d3c-a39c-8278c8ec2cf9" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-glowne-dania-z-krewetek"
+                        <a href="#menu-glowne-dania-z-krewetek"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-glowne-dania-z-krewetek">
 
                           <div class="m-group__header-text">
@@ -7937,7 +8257,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-glowne-dania-z-krewetek"
+                        <a href="#link-to-glowne-dania-z-krewetek"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -7951,7 +8271,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="1965c65c-3f12-4abf-9388-ad7f2bb60548" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-makarony"
+                        <a href="#menu-makarony"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-makarony">
 
                           <div class="m-group__header-text">
@@ -8235,7 +8555,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-makarony"
+                        <a href="#link-to-makarony"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -8249,7 +8569,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="034c86d3-206c-40cc-87f0-b69e788798a9" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-ryz-basmati"
+                        <a href="#menu-ryz-basmati"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-ryz-basmati">
 
                           <div class="m-group__header-text">
@@ -9140,7 +9460,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-ryz-basmati"
+                        <a href="#link-to-ryz-basmati"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -9154,7 +9474,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="02c354a3-a5c8-4d25-8d06-9f9995b97e11" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-pakistanskie-placki"
+                        <a href="#menu-pakistanskie-placki"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-pakistanskie-placki">
 
                           <div class="m-group__header-text">
@@ -10048,7 +10368,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-pakistanskie-placki"
+                        <a href="#link-to-pakistanskie-placki"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -10062,7 +10382,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="9bc93c3c-6539-4ee8-85b8-f0eaacbf046f" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-desery-indyjskie"
+                        <a href="#menu-desery-indyjskie"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-desery-indyjskie">
 
                           <div class="m-group__header-text">
@@ -10269,7 +10589,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-desery-indyjskie"
+                        <a href="#link-to-desery-indyjskie"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -10283,7 +10603,7 @@
                       <h3
                         class="m-group__header restaurant-menu__dish-group-name m-group__header--hidden js-dish-types-hours js-toggle-group-list-item"
                         data-section-id="472c18b0-6262-4dac-b389-b9dfbca087fa" data-visible-in="Site">
-                        <a href="https://www.musarratrestaurant.pl/#menu-napoje"
+                        <a href="#menu-napoje"
                           class="m-group__header-link js-toggle-group-link" data-target="#menu-napoje">
 
                           <div class="m-group__header-text">
@@ -10890,7 +11210,7 @@
 
 
 
-                        <a href="https://www.musarratrestaurant.pl/#link-to-napoje"
+                        <a href="#link-to-napoje"
                           class="m-skip-link m-skip-link--static">
                           <font dir="auto" style="vertical-align: inherit;">
                             <font dir="auto" style="vertical-align: inherit;">Back to menu group navigation</font>
@@ -11163,7 +11483,7 @@
         </ul>
 
         <p class="m-grid-gallery__action">
-          <a class="btn btn-primary btn-lg" href="https://www.musarratrestaurant.pl/#section-contact">
+          <a class="btn btn-primary btn-lg" href="#section-contact">
             <font dir="auto" style="vertical-align: inherit;">
               <font dir="auto" style="vertical-align: inherit;">
                 Contact
@@ -11486,7 +11806,7 @@
                 </a></span><span class="u-text-nowrap">
                 <font dir="auto" style="vertical-align: inherit;"> |
                 </font>
-              </span><span class="u-hidden-app u-text-nowrap"><a href="https://www.musarratrestaurant.pl/#"
+              </span><span class="u-hidden-app u-text-nowrap"><a href="#"
                   role="button" data-cc="show-preferencesModal" data-field-id="showPreferences" class="m-footer__link"
                   rel="nofollow" aria-haspopup="dialog">
                   <font dir="auto" style="vertical-align: inherit;">
@@ -11523,7 +11843,7 @@
               <font dir="auto" style="vertical-align: inherit;"></font>
             </span>
             <span class="u-hidden-app u-text-nowrap">
-              <a href="https://www.musarratrestaurant.pl/#" role="button" data-cc="show-preferencesModal"
+              <a href="#" role="button" data-cc="show-preferencesModal"
                 data-field-id="showPreferences" class="m-footer__link" rel="nofollow" aria-haspopup="dialog">
                 <font dir="auto" style="vertical-align: inherit;"></font>
               </a>
@@ -11845,7 +12165,7 @@
         </div>
         <div class="m-dock js-dock">
           <div class="m-dock__content">
-            <a href="https://www.musarratrestaurant.pl/#" data-bs-dismiss="modal" class="btn btn-primary">Ok</a>
+            <a href="#" data-bs-dismiss="modal" class="btn btn-primary">Ok</a>
           </div>
         </div>
       </div>
@@ -11875,7 +12195,7 @@
 
 
 
-            <a href="https://www.musarratrestaurant.pl/#" data-bs-dismiss="modal" class="btn btn-primary">Zamknij</a>
+            <a href="#" data-bs-dismiss="modal" class="btn btn-primary">Zamknij</a>
           </div>
         </div>
       </div>
@@ -12046,7 +12366,7 @@
           }
         });
 
-        document.querySelectorAll('a[href*="musarratrestaurant.pl/#section-menu"], a[href*="musarratrestaurant.pl/restauracja/saffron-garden"]').forEach(function (link) {
+        document.querySelectorAll('a[href="#section-menu"], a[href*="musarratrestaurant.pl/#section-menu"], a[href*="musarratrestaurant.pl/restauracja/saffron-garden"]').forEach(function (link) {
           link.setAttribute("href", "#section-menu");
         });
       }
@@ -12072,8 +12392,40 @@
         normalizeHero();
       }
 
+      function setupMobileNavigation() {
+        var mobileNav = document.getElementById("responsive-nav");
+        var backdrop = document.querySelector(".mobile-navigation-backdrop");
+        if (!mobileNav || !backdrop) {
+          return;
+        }
+
+        function setOpen(isOpen) {
+          mobileNav.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          mobileNav.classList.toggle("is-open", isOpen);
+          backdrop.classList.toggle("is-open", isOpen);
+          document.body.classList.toggle("mobile-nav-open", isOpen);
+        }
+
+        document.querySelectorAll(".js-navigation-toggle").forEach(function (toggle) {
+          toggle.addEventListener("click", function (event) {
+            var isCloseAction =
+              toggle.classList.contains("mobile-navigation-toggle") ||
+              toggle.classList.contains("mobile-navigation-backdrop");
+
+            event.preventDefault();
+            setOpen(isCloseAction ? false : mobileNav.getAttribute("aria-expanded") !== "true");
+          });
+        });
+
+        mobileNav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setOpen(false);
+          });
+        });
+      }
+
       document.addEventListener("click", function (event) {
-        var link = event.target.closest('a[href*="musarratrestaurant.pl/#section-menu"], a[href*="musarratrestaurant.pl/restauracja/saffron-garden"], a[href="#section-menu"]');
+        var link = event.target.closest('a[href="#section-menu"], a[href*="musarratrestaurant.pl/#section-menu"], a[href*="musarratrestaurant.pl/restauracja/saffron-garden"]');
         if (!link) {
           return;
         }
@@ -12089,6 +12441,7 @@
 
       document.addEventListener("DOMContentLoaded", function () {
         normalizePage();
+        setupMobileNavigation();
       });
     })();
   </script>
